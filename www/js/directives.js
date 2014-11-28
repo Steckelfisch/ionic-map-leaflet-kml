@@ -22,7 +22,9 @@ angular.module('starter.directives', [])
 
       }
 
-      if (document.readyState === "complete") {
+      console.log('Etat : '+document.readyState);
+
+      if (document.readyState === "complete" || document.readyState === "interactive") {
         initialize();
       } else {
         alert('Erreur de chargement de la carte.');
